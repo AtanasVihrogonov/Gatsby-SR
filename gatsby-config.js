@@ -6,5 +6,16 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [`gatsby-plugin-styled-components`],
+  steMetadata: {
+    title: 'Simply Resipes',
+    description: 'Nice and clean recipes site',
+    author: '@vihrogonov',
+
+  },
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`, 
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+  ],
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400');
 *,
 ::after,
 ::before {
@@ -54,8 +54,8 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* typography */
   --defaultFontSize: 87.5%;
-  --headingFont: "Inconsolata", monospace;
-  --bodyFont: "Montserrat", sans-serif;
+  --headingFont: 'Inconsolata', monospace;
+  --bodyFont: 'Montserrat', sans-serif;
   --smallText: 0.8em;
   --extraSmallText: 0.7em;
   /* rest */
@@ -302,7 +302,7 @@ form > *:last-child {
 .form-loading::before {
   background: var(--white);
   position: absolute;
-  content: "";
+  content: '';
   height: 100%;
   width: 100%;
   top: 0;
@@ -317,7 +317,7 @@ form > *:last-child {
 }
 
 .form-loading::after {
-  content: "";
+  content: '';
   position: absolute;
   top: calc(50% - 3rem);
   left: calc(50% - 3rem);
@@ -507,6 +507,8 @@ form > *:last-child {
     align-items: center;
     height: 400px;
   }
+
+  /* set the height of the image based on the parent | = 400px */
   .about-img {
     height: 100%;
   }
@@ -521,6 +523,7 @@ form > *:last-child {
 /*#########*/
 
 .hero-img {
+  /* give height: 100% in order to control it by the height of the parent | = 40vh*/
   height: 100%;
   border-radius: var(--borderRadius);
 }

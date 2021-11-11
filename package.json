@@ -7,7 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,sass,less,scss,graphql,yaml,vue}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -16,10 +16,15 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.3",
     "gatsby": "^4.1.1",
+    "gatsby-plugin-image": "^2.1.1",
+    "gatsby-plugin-sharp": "^4.1.2",
     "gatsby-plugin-styled-components": "^5.1.0",
+    "gatsby-source-filesystem": "^4.1.1",
+    "gatsby-transformer-sharp": "^4.1.0",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.3.1",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {

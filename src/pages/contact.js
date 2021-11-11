@@ -1,5 +1,5 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from 'react'
+import Layout from '../components/Layout'
 
 export default function contact() {
   return (
@@ -28,11 +28,13 @@ export default function contact() {
                 <label htmlFor="email">your enmail</label>
                 <input type="text" name="email" id="email" />
               </div>
-							<div className="form-row">
-								<label htmlFor='message'>message</label>
-								<textarea name="message" id="message"></textarea>
-							</div>
-							<button type='submit' className='btn block'>submit</button>
+              <div className="form-row">
+                <label htmlFor="message">message</label>
+                <textarea name="message" id="message"></textarea>
+              </div>
+              <button type="submit" className="btn block">
+                submit
+              </button>
             </form>
           </article>
         </section>

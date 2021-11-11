@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 // global component
-import Layout from "../components/Layout"
+import Layout from '../components/Layout'
 
 const Tags = () => {
   return (
