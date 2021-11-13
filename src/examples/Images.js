@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 // gatsby plugin
-import {StaticImage} from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Images = () => {
   return (

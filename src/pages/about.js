@@ -2,8 +2,10 @@ import React from 'react'
 // global component
 import Layout from '../components/Layout'
 
-import {Link} from 'gatsby'
-import {StaticImage} from 'gatsby-plugin-image'
+// every time when you import a Link have to import also graphql!
+import {Link, graphql} from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
+
 
 const About = () => {
   return (
@@ -30,5 +32,24 @@ const About = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allContentfulRecipe(
+      sort: {fields: title, order: ASC}
+      filter: {featured: {eq: true}}
+    ) {
+      nodes {
+        id
+        title
+        cookTime
+        prepTime
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        }
+      }
+    }
+  }
+`
 
 export default About
