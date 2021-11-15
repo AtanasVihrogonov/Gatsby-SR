@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import {GatsbyImage, getImage} from 'gatsby-plugin-image'
+import slugify from 'slugify'
 
 // if recipes is not provided just return empty array. In case you not provided a props in ResipesList in about page.
 const RecipesList = ({recipes = []}) => {
@@ -11,8 +12,9 @@ const RecipesList = ({recipes = []}) => {
         // set a helper function instate the image is not provided to avoid the fat error!
         const pathToImage = getImage(image)
         // set Link to dynamic pages
+        const slug = slugify(title, {lower: true})
         return (
-          <Link key={id} to={`/${title}`} className="recipe">
+          <Link key={id} to={`/${slug}`} className="recipe">
             <GatsbyImage
               image={pathToImage}
               className="recipe-img"

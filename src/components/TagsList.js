@@ -1,5 +1,5 @@
 import React from 'react'
-import setupTags from '../pages/setupTags'
+import setupTags from '../../setupTags'
 import {Link} from 'gatsby'
 
 const TagsList = ({recipes}) => {
