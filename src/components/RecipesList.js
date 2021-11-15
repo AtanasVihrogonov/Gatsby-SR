@@ -2,10 +2,8 @@ import React from 'react'
 import {Link} from 'gatsby'
 import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 
-// if recipes is not provided just return empty array
+// if recipes is not provided just return empty array. In case you not provided a props in ResipesList in about page.
 const RecipesList = ({recipes = []}) => {
-  // iterate over the recipes
-
   return (
     <div className="recipes-list">
       {recipes.map(recipe => {

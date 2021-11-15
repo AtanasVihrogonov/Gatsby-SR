@@ -1,9 +1,24 @@
 import React from 'react'
+import setupTags from '../pages/setupTags'
+import {Link} from 'gatsby'
 
-const TagsList = () => {
+const TagsList = ({recipes}) => {
+  const newTags = setupTags(recipes)
+  // console.log(newTags);
   return (
-    <div>
-      <div> this is a tags list</div>
+    <div className="tag-container">
+      <h4>recipes</h4>
+      <div className="tags-list">
+        {newTags.map((tag, index) => {
+          {/* tag is an array */}
+          const [text, value] = tag
+          return (
+            <Link to={`/${text}`} key={index}>
+              {text} ({value})
+            </Link>
+          )
+        })}
+      </div>
     </div>
   )
 }

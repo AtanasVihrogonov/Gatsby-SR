@@ -1,13 +1,19 @@
 import React from 'react'
 // global component
 import Layout from '../components/Layout'
+import RecipesList from '../components/RecipesList'
 
 // every time when you import a Link have to import also graphql!
+import {StaticImage} from 'gatsby-plugin-image'
 import {Link, graphql} from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 
+/* ==============================================================================================
+ * The difference between component query & page query is the fact that with page query we don't
+ * need to use our hook. We simply can access it, if we take a look data property.
+ * ============================================================================================== */
 
-const About = () => {
+const About = ({data}) => {
+  const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
       <main className="page">
@@ -26,7 +32,16 @@ const About = () => {
               contact
             </Link>
           </article>
-          <StaticImage src='../assets/images/about.jpeg' alt='Person' className='about-img' placeholder='blurred' />
+          <StaticImage
+            src="../assets/images/about.jpeg"
+            alt="Person"
+            className="about-img"
+            placeholder="blurred"
+          />
+        </section>
+        <section className="featured-recipes">
+          <h5>Look at this Awesomesouce!</h5>
+          <RecipesList recipes={recipes} />
         </section>
       </main>
     </Layout>
