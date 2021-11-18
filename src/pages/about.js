@@ -2,6 +2,7 @@ import React from 'react'
 // global component
 import Layout from '../components/Layout'
 import RecipesList from '../components/RecipesList'
+import SEO from '../components/SEO'
 
 // every time when you import a Link have to import also graphql!
 import {StaticImage} from 'gatsby-plugin-image'
@@ -16,6 +17,7 @@ const About = ({data}) => {
   const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
+      <SEO title="About" />
       <main className="page">
         <section className="about-page">
           <article>

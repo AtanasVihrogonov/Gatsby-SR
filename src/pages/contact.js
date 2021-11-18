@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import RecipesList from '../components/RecipesList'
+import SEO from '../components/SEO'
 
 import {StaticImage} from 'gatsby-plugin-image'
 import {graphql} from 'gatsby'
@@ -10,6 +11,7 @@ const Contact = ({data}) => {
 
   return (
     <Layout>
+      <SEO title='Contact' />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">
