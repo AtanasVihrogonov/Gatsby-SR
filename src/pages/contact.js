@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import RecipesList from '../components/RecipesList'
 
 import {StaticImage} from 'gatsby-plugin-image'
-import {Link, graphql} from 'gatsby'
+import {graphql} from 'gatsby'
 
 const Contact = ({data}) => {
   const recipes = data.allContentfulRecipe.nodes
@@ -25,7 +25,11 @@ const Contact = ({data}) => {
             </p>
           </article>
           <article>
-            <form className="form contact-form">
+            <form
+              className="form contact-form"
+              action="https://formspree.io/f/xvodedek"
+              method="POST"
+            >
               <div className="form-row">
                 <label htmlFor="name">your name</label>
                 <input type="text" name="name" id="name" />
