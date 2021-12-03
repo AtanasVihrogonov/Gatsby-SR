@@ -438,10 +438,11 @@ form > *:last-child {
 /*#########*/
 .page-footer {
   text-align: center;
-  height: 4rem;
-  display: flex;
+  height: 5rem;
+  display: grid;
   align-items: center;
   justify-content: center;
+  align-content: center;
   background: var(--black);
   color: var(--white);
 }
@@ -451,7 +452,7 @@ form > *:last-child {
 .page-footer p {
   margin-bottom: 0;
 }
-.page-footer span,
+
 .page-footer a {
   color: var(--primary-500);
 }
